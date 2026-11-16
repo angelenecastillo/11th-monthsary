@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy 11th Monthsary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@1,700&family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sparkles"></div>
+<div class="bgf"><svg class="cp"><use href="#sprig"/></svg><svg class="cb"><use href="#sprig"/></svg><svg class="cb"><use href="#sprig"/></svg><svg class="cp"><use href="#sprig"/></svg><svg class="cp"><use href="#sprig"/></svg><svg class="cb"><use href="#sprig"/></svg><svg class="cb"><use href="#sprig"/></svg><svg class="cp"><use href="#sprig"/></svg></div>
+<svg width="0" height="0" style="position:absolute"><defs><g id="pt2"><path d="M0,0C-8,-8-20,-22-20,-36Q-17,-44-12,-38Q-9,-46-4,-39Q0,-47 4,-39Q9,-46 12,-38Q17,-44 20,-36C20,-22 8,-8 0,0Z" stroke="var(--ln)" stroke-opacity=".35" stroke-width="1"/><path d="M0,-3L-9,-32M0,-3L0,-36M0,-3L9,-32" stroke="var(--ln)" stroke-opacity=".22" fill="none"/></g><symbol id="carn" viewBox="0 8 100 88" overflow="visible"><g transform="translate(50 78)"><use href="#pt2" transform="rotate(-56) scale(0.95)" fill="var(--c1)"/><use href="#pt2" transform="rotate(-34) scale(0.95)" fill="var(--c1)"/><use href="#pt2" transform="rotate(-12) scale(0.95)" fill="var(--c1)"/><use href="#pt2" transform="rotate(12) scale(0.95)" fill="var(--c1)"/><use href="#pt2" transform="rotate(34) scale(0.95)" fill="var(--c1)"/><use href="#pt2" transform="rotate(56) scale(0.95)" fill="var(--c1)"/><use href="#pt2" transform="rotate(-45) scale(0.82)" fill="var(--c2)"/><use href="#pt2" transform="rotate(-22) scale(0.82)" fill="var(--c2)"/><use href="#pt2" transform="rotate(0) scale(0.82)" fill="var(--c2)"/><use href="#pt2" transform="rotate(22) scale(0.82)" fill="var(--c2)"/><use href="#pt2" transform="rotate(45) scale(0.82)" fill="var(--c2)"/><use href="#pt2" transform="rotate(-30) scale(0.62)" fill="var(--c3)"/><use href="#pt2" transform="rotate(-10) scale(0.62)" fill="var(--c3)"/><use href="#pt2" transform="rotate(12) scale(0.62)" fill="var(--c3)"/><use href="#pt2" transform="rotate(32) scale(0.62)" fill="var(--c3)"/><use href="#pt2" transform="rotate(-12) scale(0.4)" fill="var(--c2)"/><use href="#pt2" transform="rotate(12) scale(0.4)" fill="var(--c2)"/><use href="#pt2" transform="rotate(0) scale(0.28)" fill="var(--c3)"/></g><path d="M38,72C37,86 43,92 50,94C57,92 63,86 62,72Q50,80 38,72Z" fill="#5fa08f"/><path d="M44,78L43,90M50,80V93M56,78L57,90" stroke="#3f7d6c" stroke-opacity=".5" fill="none"/></symbol><symbol id="sprig" viewBox="0 8 100 142" overflow="visible"><path d="M50,92C48,108 54,124 50,148" stroke="#5fa08f" stroke-width="4" fill="none"/><path d="M50,118C32,116 22,104 20,92C38,94 48,104 50,118Z" fill="#5fa08f"/><path d="M51,130C70,128 80,116 82,104C62,106 53,116 51,130Z" fill="#76b8a4"/><use href="#carn" x="0" y="8" width="100" height="88"/></symbol></defs></svg>
+
+
+<!-- SCREEN 1: the mail -->
+<section id="mail" class="screen active">
+  <h1 class="title">You got mail, Bubi!</h1>
+  <div class="slot"></div>
+  <div class="tray" id="tray"><div class="env-pos" id="pos">
+    <div class="envelope" id="env">
+      <div class="env-back"></div>
+      <div class="letter"><span>My Kayie,</span><span class="l2">Happy 11 months ♥</span><div class="lph"><div class="photo"><img src="us-fixed.jpg" alt=""></div><div class="photo"><img src="forever-memories.jpg" alt=""></div><div class="photo"><img src="my-favorite.jpg" alt=""></div></div></div>
+      <div class="env-front"></div>
+      
+      <svg class="env-spr cb "><use href="#sprig"/></svg>
+      <div class="flap"></div>
+      <div class="seal">11</div>
+    </div>
+    <p class="readhint">(click on the letter to read it!)</p>
+  </div></div>
+  <button class="btn" id="btn">click here to claim your mail!</button>
+  
+</section>
+
+<!-- SCREEN 2: the scrapbook -->
+<section id="book" class="screen">
+  <!-- Add your photos: put files in /images and set src, e.g. src="images/photo1.jpg" -->
+  <figure class="polaroid p1" data-msg="I was so nervous that day, but you made everything feel easy. I knew then I wanted more days like this."><div class="photo"><img src="first-date.jpg" alt="our first date"></div><figcaption>our first date</figcaption></figure>
+  <figure class="polaroid p2" data-msg="This is my favorite picture of you. Your smile here is everything to me."><div class="photo"><img src="my-favorite.jpg" alt="my favorite"></div><figcaption>my favorite</figcaption></figure>
+  <figure class="polaroid p3" data-msg="Every moment with you becomes my favorite memory."><div class="photo"><img src="us-fixed.jpg" alt="us"></div><figcaption>us ♥</figcaption></figure>
+  <figure class="polaroid p4" data-msg="You were being so cute here and I couldn't stop smiling at you."><div class="photo"><img src="so-cutie.jpg" alt="so cute"></div><figcaption>so cutie</figcaption></figure>
+  <figure class="polaroid p5" data-msg="I want to keep making memories like this with you, always."><div class="photo"><img src="forever-memories.jpg" alt="forever memories"></div><figcaption>forever memories</figcaption></figure>
+  <figure class="polaroid p6" data-msg="Me and you, against anything. I love us."><div class="photo"><img src="you-and-me-fixed.jpg" alt="you & me"></div><figcaption>you & me</figcaption></figure>
+
+  <svg class="carn cp sticker s1"><use href="#carn"/></svg><svg class="carn cb sticker s4"><use href="#carn"/></svg>
+
+  <article class="note">
+    <h2>My Kayie,</h2>
+    <p>Happy 11th Monthsary! Eleven months of laughing, growing, and choosing each other every single day.</p>
+    <p>Thank you for being my calm, my joy, and my favorite person. I can't wait for every month still to come.</p>
+    <p class="sign">— Your Kyu</p>
+    <p class="tiny">tap the photos to read a message ♥</p>
+  </article>
+  <div class="actions"><button class="btn" id="back">back</button><button class="btn" id="next">our story ♥</button></div>
+</section>
+
+<!-- SCREEN 3: our story -->
+<section id="story" class="screen">
+  <div class="wrap">
+    <h2 class="big">Our Story</h2>
+
+    <!-- 1. live counter -->
+    <div class="card counter">
+      <p class="small" id="months">together for</p>
+      <div class="units">
+        <div><b id="cd">0</b><span>days</span></div>
+        <div><b id="ch">0</b><span>hours</span></div>
+        <div><b id="cm">0</b><span>minutes</span></div>
+        <div><b id="cs">0</b><span>seconds</span></div>
+      </div>
+    </div>
+
+    <!-- 2. folders: one per month -->
+    <div class="card song" id="songcard"><div class="disc" id="disc"></div><div class="stxt"><p class="small">our song</p><h3>Nobody Else</h3><p>LANY</p></div><div class="slinks">
+      <button class="btn" id="songbtn">▶ play</button>
+    </div></div>
+
+    <button class="btn" id="sback">back to photos</button>
+  </div>
+</section>
+
+<!-- photo viewer -->
+<div class="lb" id="lb">
+  <div class="lb-card">
+    <button class="lb-x" id="lbx" aria-label="Close">×</button>
+    <div class="photo"><img id="lbimg" src="" alt=""></div>
+    <h4 id="lbcap"></h4>
+    <p id="lbmsg"></p>
+    <div class="lb-nav"><button id="lbprev" aria-label="Previous">‹</button><span id="lbn"></span><button id="lbnext" aria-label="Next">›</button></div>
+  </div>
+</div>
+
+<!-- Our song: audio/nobody-else.mp3 -->
+<audio id="bgm" loop preload="auto" src="nobody-else.mp3"></audio>
+<button class="music" id="music" aria-label="Music on/off">♪</button>
+
+<script src="script.js"></script>
+</body>
+</html>
