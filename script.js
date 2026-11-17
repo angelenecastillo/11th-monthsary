@@ -32,7 +32,8 @@ function go(id) {
 
 /* floating sparkles */
 const box = $('sparkles');
-for (let i = 0; i < 26; i++) {
+const SPARKLES = matchMedia('(max-width:640px)').matches ? 14 : 26;   // lighter on phones
+for (let i = 0; i < SPARKLES; i++) {
   const s = document.createElement('span');
   s.className = 'sp';
   s.textContent = ['✦', '✧', '♥'][i % 3];
@@ -117,3 +118,14 @@ addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') showPhoto(cur - 1);
   if (e.key === 'ArrowRight') showPhoto(cur + 1);
 });
+
+/* swipe left/right inside the photo viewer (phones) */
+let sx = null, sy = null;
+const lbCard = document.querySelector('.lb-card');
+lbCard.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+lbCard.addEventListener('touchend', e => {
+  if (sx === null) return;
+  const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+  sx = sy = null;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) showPhoto(cur + (dx < 0 ? 1 : -1));
+}, { passive: true });
