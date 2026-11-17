@@ -129,3 +129,42 @@ lbCard.addEventListener('touchend', e => {
   sx = sy = null;
   if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) showPhoto(cur + (dx < 0 ? 1 : -1));
 }, { passive: true });
+
+/* ===== our story: timeline (edit the text / add dates here) ===== */
+const MILESTONES = [
+  { title: 'Our first date', text: 'I was nervous, you made it easy, and the potcor won my heart.' },
+  { title: 'My birthday with you', date: '', text: 'You broke my birthday blues and made the day special.' },
+  { title: 'We made it official', date: 'December 16, 2025', text: 'The day I became your girlfriend, and the start of our roller coaster.' },
+  { title: 'Eleven months', date: 'November 16, 2026', text: 'Still laughing, still growing, still choosing each other.' }
+];
+$('tl').innerHTML = MILESTONES.map(m =>
+  `<li><h4>${m.title}</h4>${m.date ? `<time>${m.date}</time>` : ''}<p>${m.text}</p></li>`).join('');
+
+/* ===== reasons I love you (edit freely) ===== */
+const REASONS = [
+  'you make ordinary days feel easy',
+  'your smile is my favorite view',
+  'you are my calm when everything is loud',
+  'you laugh at my silly jokes',
+  'you make me feel at home',
+  'you choose me, every single day',
+  'you make me want to be better'
+];
+let ri = -1;
+$('rbtn').addEventListener('click', () => {
+  let n; do { n = Math.floor(Math.random() * REASONS.length); } while (n === ri && REASONS.length > 1);
+  ri = n;
+  const t = $('rtxt'); t.textContent = REASONS[n];
+  t.classList.remove('pop'); void t.offsetWidth; t.classList.add('pop');
+  $('rbtn').textContent = 'another one ♥';
+});
+
+/* ===== countdown to our 1st year ===== */
+const YEAR1 = new Date(START); YEAR1.setFullYear(YEAR1.getFullYear() + 1);
+function yearTick() {
+  const left = YEAR1 - new Date(), total = YEAR1 - START;
+  $('yd').textContent = Math.max(0, Math.ceil(left / 864e5));
+  $('ybar').style.width = Math.min(100, Math.max(0, (1 - left / total) * 100)).toFixed(1) + '%';
+  $('ydate').textContent = YEAR1.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
+yearTick(); setInterval(yearTick, 60000);
