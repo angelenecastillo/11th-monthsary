@@ -134,8 +134,8 @@ lbCard.addEventListener('touchend', e => {
 const MILESTONES = [
   { title: 'Our first date', text: 'I was nervous, you made it easy, and the potcor won my heart.' },
   { title: 'My birthday with you', date: '', text: 'You broke my birthday blues and made the day special.' },
-  { title: 'We made it official', date: 'December 16, 2025', text: 'The day I became your girlfriend, and the start of our roller coaster.' },
-  { title: 'Eleven months', date: 'November 16, 2026', text: 'Still laughing, still growing, still choosing each other.' }
+  { title: 'We made it official', date: 'December 18, 2025', text: 'The day I became your girlfriend, and the start of our roller coaster.' },
+  { title: 'Eleven months', date: 'November 18, 2026', text: 'Still laughing, still growing, still choosing each other.' }
 ];
 $('tl').innerHTML = MILESTONES.map(m =>
   `<li><h4>${m.title}</h4>${m.date ? `<time>${m.date}</time>` : ''}<p>${m.text}</p></li>`).join('');
