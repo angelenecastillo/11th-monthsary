@@ -23,7 +23,7 @@ sb.addEventListener('click', () => setMusic(bgm.paused));
 
 /* ===== EDIT THESE =====
    Your anniversary / the day you became a couple (year-month-day) */
-const START = new Date('2025-12-16T00:00:00');
+const START = new Date('2025-12-18T00:00:00');
 
 /* ===== screens ===== */
 function go(id) {
